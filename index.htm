@@ -7,31 +7,60 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form novalidate>
-        <label for="mail">Email:</label>
-        <input type="email" name="mail" id="mail">
-        <span class="error" aria-live="polite"></span>
-        <label for="country"> Country</label>
-        <select name="country" id="country">
-            <option value="ar">Argentina</option>
-            <option value="br">Brasil</option>
-            <option value="bo">Bolivia</option>
-            <option value="ch">Chile</option>
-            <option value="pe">Peru</option>
-            <option value="ec">Ecuador</option>
-            <option value="co">Colombia</option>
-        </select>
-        <label for="zip-code">Zip Code:</label>
-        <input type="text" name="zip-code" id="zip-code">
-        <span class="error" aria-live="polite"></span>
-        <label for="pw">Password</label>
-        <input type="password" name="pw" id="pw">
-        <span class="error"></span>
-        <label for="cpw">Confirm password</label>
-        <input type="password" name="cpw" id="cpw">
-        <span class="error"></span>
-    </form>
-
+    <div id="form-container">
+        <form novalidate>
+            <div class="input-container">
+                <div class="input-items">
+                    <label for="mail">Email:</label>
+                    <input type="email" name="mail" id="mail">
+                </div>
+                <div>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-items">
+                    <label for="country"> Country</label>
+                    <select name="country" id="country">
+                        <option value="ar">Argentina</option>
+                        <option value="br">Brasil</option>
+                        <option value="bo">Bolivia</option>
+                        <option value="ch">Chile</option>
+                        <option value="pe">Peru</option>
+                        <option value="ec">Ecuador</option>
+                        <option value="co">Colombia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-items">
+                    <label for="zip-code">Zip Code:</label>
+                    <input type="text" name="zip-code" id="zip-code">
+                </div>
+                <div>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="input-items">
+                    <label for="pw">Password</label>
+                    <input type="password" name="pw" id="pw">
+                </div>
+                <div>
+                    <span class="error"></span>
+                </div>
+            </div>    
+            <div class="input-container">
+                <div class="input-items">
+                    <label for="cpw">Confirm password</label>
+                    <input type="password" name="cpw" id="cpw">
+                </div>
+                <div>
+                    <span class="error"></span>
+                </div>
+            </div>        
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

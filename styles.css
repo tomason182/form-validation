@@ -1,0 +1,30 @@
+body {
+    font: 1em sans-serif;
+    width: 400px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#form-container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.input-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-items > input {
+    width: 200px;
+}
