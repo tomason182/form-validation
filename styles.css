@@ -5,6 +5,19 @@ body {
     margin: 0 auto;
 }
 
+input {
+    height: 1.5rem;
+}
+
+input:focus,
+input:active {
+    outline: none;    
+}
+
+select{
+    height: 2rem;
+}
+
 #form-container {
     max-width: 400px;
     display: flex;
@@ -27,4 +40,19 @@ body {
 
 .input-items > input {
     width: 200px;
+}
+
+#mail:invalid {
+    border: 2px solid red;
+}
+
+#mail:valid {
+    border: 2px solid green;
+}
+
+.invalid {
+    font: 0.6em sans-serif;
+    color: red;
+    float: right;
+    padding: 0.7rem 0;
 }
