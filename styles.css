@@ -42,14 +42,15 @@ select{
     width: 200px;
 }
 
-#mail.invalid {
+#mail.invalid,
+#psw.invalid {
     border: 2px solid red;
 }
 
-#mail:valid {
+#mail:valid,
+#psw.valid{
     border: 2px solid green;
 }
-
 .error {
     font: 0.6em sans-serif;
     color: red;
