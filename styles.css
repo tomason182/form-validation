@@ -43,12 +43,14 @@ select{
 }
 
 #mail.invalid,
-#psw.invalid {
+#psw.invalid,
+#cpsw.invalid {
     border: 2px solid red;
 }
 
 #mail:valid,
-#psw.valid{
+#psw.valid,
+#cpsw.valid {
     border: 2px solid green;
 }
 .error {

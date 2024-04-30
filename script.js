@@ -2,6 +2,8 @@ const email = document.getElementById("mail");
 const emailError = document.querySelector("span.email-error");
 const psw = document.getElementById("psw");
 const pswError = document.querySelector("span.psw-error");
+const confpsw = document.getElementById("cpsw");
+const cpswError = document.querySelector("span.cpsw-error")
 
 
 email.value = "";
@@ -29,10 +31,14 @@ email.addEventListener("focusout", (event) => {
 
 psw.addEventListener("focusout", (event) => {
     const pswValue = psw.value;
-    checkPassword(pswValue);
+    validatePassword(pswValue);
 });
 
-function checkPassword(password) {
+confpsw.addEventListener("focusout", (event) => {
+    checkPassword(confpsw.value, psw.value);
+})
+
+function validatePassword(password) {
     const pswRegExp = /^(?=.*\d)(?=.*[A-Z])(?=.*\W).{8,24}$/;
     const isValid = pswRegExp.test(password);
 
@@ -51,5 +57,16 @@ function checkPassword(password) {
       psw.className = "invalid";
     }
   }
+
+
+function checkPassword(cpsw, psw) {
+    if (cpsw === psw) {
+        cpswError.textContent = "";
+        confpsw.className = "valid";
+    } else {
+        cpswError.textContent = "passwords doesn't match";
+        confpsw.className = "invalid";
+    }
+}
 
 
